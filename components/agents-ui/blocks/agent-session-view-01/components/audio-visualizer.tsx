@@ -36,7 +36,8 @@ export function AudioVisualizer({
   isChatOpen,
   audioVisualizerType = 'bar',
   audioVisualizerColor,
-  audioVisualizerColorShift = 0.3,
+  // Matches the documented AgentAudioVisualizerAura usage.
+  audioVisualizerColorShift = 0.1,
   audioVisualizerBarCount = 5,
   audioVisualizerRadialRadius = 100,
   audioVisualizerRadialBarCount = 25,
