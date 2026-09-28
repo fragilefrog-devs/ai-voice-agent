@@ -57,7 +57,7 @@ export function AudioVisualizer({
           color={audioVisualizerColor}
           colorShift={audioVisualizerColorShift}
           themeMode={themeMode}
-          className={cn('size-[300px] md:size-[450px]', className)}
+          className={cn('size-[200px] sm:size-[300px] md:size-[450px]', className)}
           {...props}
         />
       );
@@ -71,7 +71,7 @@ export function AudioVisualizer({
             color={audioVisualizerColor}
             colorShift={audioVisualizerColorShift}
             lineWidth={isChatOpen ? audioVisualizerWaveLineWidth * 2 : audioVisualizerWaveLineWidth}
-            className="size-[300px] md:size-[450px]"
+            className="size-[200px] sm:size-[300px] md:size-[450px]"
           />
         </motion.div>
       );
@@ -99,7 +99,10 @@ export function AudioVisualizer({
           radius={Math.round(
             Math.min(audioVisualizerGridRowCount, audioVisualizerGridColumnCount) / 4
           )}
-          className={cn('size-[350px] gap-0 p-8 *:place-self-center md:size-[450px]', className)}
+          className={cn(
+            'size-[220px] gap-0 p-4 *:place-self-center sm:size-[280px] sm:p-6 md:size-[450px] md:p-8',
+            className
+          )}
           {...props}
         />
       );
@@ -114,7 +117,7 @@ export function AudioVisualizer({
             audioTrack={audioTrack}
             radius={audioVisualizerRadialRadius}
             barCount={audioVisualizerRadialBarCount}
-            className="size-[450px]"
+            className="size-[260px] sm:size-[340px] md:size-[450px]"
           />
         </motion.div>
       );
@@ -125,16 +128,28 @@ export function AudioVisualizer({
 
       if (audioVisualizerBarCount <= 5) {
         size = 'xl';
-        sizedClassName = cn('size-[450px] *:min-h-[64px] *:w-[64px] gap-4', className);
+        sizedClassName = cn(
+          'size-[220px] *:min-h-[32px] *:w-[32px] gap-2 sm:size-[320px] sm:*:min-h-[48px] sm:*:w-[48px] sm:gap-3 md:size-[450px] md:*:min-h-[64px] md:*:w-[64px] md:gap-4',
+          className
+        );
       } else if (audioVisualizerBarCount <= 10) {
         size = 'lg';
-        sizedClassName = cn('size-[450px]', className);
+        sizedClassName = cn(
+          'size-[220px] *:min-h-[16px] *:w-[16px] gap-1 sm:size-[320px] sm:*:min-h-[24px] sm:*:w-[24px] sm:gap-1.5 md:size-[450px]',
+          className
+        );
       } else if (audioVisualizerBarCount <= 15) {
         size = 'md';
-        sizedClassName = cn('size-[350px] md:size-[450px]', className);
+        sizedClassName = cn(
+          'size-[220px] *:min-h-[10px] *:w-[10px] gap-1 sm:size-[320px] sm:*:min-h-[14px] sm:*:w-[14px] sm:gap-1.5 md:size-[450px]',
+          className
+        );
       } else if (audioVisualizerBarCount <= 30) {
         size = 'sm';
-        sizedClassName = cn('size-[300px] md:size-[450px]', className);
+        sizedClassName = cn(
+          'size-[200px] *:min-h-[4px] *:w-[4px] gap-0.5 sm:size-[280px] sm:*:min-h-[6px] sm:*:w-[6px] md:size-[450px]',
+          className
+        );
       }
 
       return (
