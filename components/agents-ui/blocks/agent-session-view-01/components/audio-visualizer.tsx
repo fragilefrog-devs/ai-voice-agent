@@ -36,8 +36,7 @@ export function AudioVisualizer({
   isChatOpen,
   audioVisualizerType = 'bar',
   audioVisualizerColor,
-  // Matches the documented AgentAudioVisualizerAura usage.
-  audioVisualizerColorShift = 0.1,
+  audioVisualizerColorShift = 0.3,
   audioVisualizerBarCount = 5,
   audioVisualizerRadialRadius = 100,
   audioVisualizerRadialBarCount = 25,
@@ -130,7 +129,7 @@ export function AudioVisualizer({
       if (audioVisualizerBarCount <= 5) {
         size = 'xl';
         sizedClassName = cn(
-          'size-[220px] *:min-h-[32px] *:w-[32px] gap-2 sm:size-[320px] sm:*:min-h-[48px] sm:*:w-[48px] sm:gap-3 md:size-[450px] md:*:min-h-[64px] md:*:w-[64px] md:gap-4',
+          'size-[180px] *:min-h-[28px] *:w-[28px] gap-1.5 sm:size-[320px] sm:*:min-h-[48px] sm:*:w-[48px] sm:gap-3 md:size-[450px] md:*:min-h-[64px] md:*:w-[64px] md:gap-4',
           className
         );
       } else if (audioVisualizerBarCount <= 10) {

@@ -60,7 +60,7 @@ export function ViewController({ isVideoInputSupported }: ViewControllerProps) {
           supportsScreenShare={isVideoInputSupported}
           isPreConnectBufferEnabled={true}
           themeMode={resolvedTheme === 'dark' ? 'dark' : 'light'}
-          audioVisualizerType="aura"
+          audioVisualizerType="bar"
           className="fixed inset-0"
         />
       )}
