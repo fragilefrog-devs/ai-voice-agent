@@ -45,21 +45,6 @@ export const WelcomeView = ({
           {startButtonText}
         </Button>
       </section>
-
-      <div className="fixed bottom-5 left-0 flex w-full items-center justify-center">
-        <p className="text-muted-foreground max-w-prose pt-1 text-xs leading-5 font-normal text-pretty md:text-sm">
-          Is there anything in your mind? Contact Muhaimin{' '}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://muhaimin.dev/"
-            className="underline"
-          >
-            muhaimin.dev
-          </a>
-          .
-        </p>
-      </div>
     </div>
   );
 };
